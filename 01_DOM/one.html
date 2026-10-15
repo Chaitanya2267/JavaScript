@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <title>DOM</title>
+    <style>
+        .bf-black {
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body class="bf-black">
+    <div>
+        <h1 id="title" class="heading">DOM Learning <span style="display: none;">test text</span></h1>
+        <h2>Lorem, ipsum dolor.</h2>
+        <h2>Lorem, ipsum dolor.</h2>
+        <h2>Lorem, ipsum dolor.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <input type="password" name="" id="">
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+        </ul>
+    </div>
+</body>
+
+<script>
+    // console.log(window);
+    // console.log(window.document);
+    // console.log(document);
+    // console.dir(document);
+    // console.log(document.baseURId);
+
+    // const title = document.getElementById('title');
+    // const title = document.getElementById('title').id;
+    // const title = document.getElementById('title').className;
+    // const title = document.getElementById('title').getAttribute('id');
+    // const title = document.getElementById('title').getAttribute('class');
+    // const title = document.getElementById('title').setAttribute('class', 'test');
+    // console.log(title);
+
+    title.style.backgroundColor = 'green';
+    title.style.padding = '15px'
+    title.style.borderRadius = '15px'
+    
+    // title.textContent
+    // title.innerHTML
+    // title.innerText
+    
+    // document.getElementsByClassName('heading')
+
+    // document.querySelector('h2')
+    // document.querySelector('#title')
+    // document.querySelector('.heading')
+
+    const myul = document.querySelector('ul')
+    myul.querySelector('li')
+    const changeColor = myul.querySelector('li')
+    changeColor.style.backgroundColor = "green"
+    changeColor.style.padding = "10px"
+    
+</script>
+
+</html>
