@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events</title>
 </head>
+
 <body>
     <h1>Chai aur JS</h1>
     <button id="Start">Start</button>
@@ -12,13 +14,37 @@
 </body>
 <script>
     // setInterval(() => {
-        // console.log("csw", Date.now());
+    // console.log("csw", Date.now());
     // }, 1000);
 
-    const sayDate = function(str){
+    // const sayDate = function(str){
+    //     console.log(str, Date.now());
+    // }
+    // const intervalId = setInterval(sayDate, 1000, "HI")
+    // clearInterval(intervalId)
+
+
+    const sayDate = function (str) {
         console.log(str, Date.now());
-    }
-    const intervalId = setInterval(sayDate, 1000, "HI")
-    clearInterval(intervalId)
+    };
+
+    let intervalId;
+
+    document.querySelector('#Start').addEventListener('click', function () {
+        if (intervalId === undefined) {
+            intervalId = setInterval(sayDate, 1000, "HI");
+            console.log("Started");
+        }
+    });
+
+    document.querySelector('#stop').addEventListener('click', function () {
+        if (intervalId !== undefined) {
+            clearInterval(intervalId);
+            intervalId = undefined;
+            console.log("Stopped");
+        }
+    });
+
 </script>
+
 </html>
